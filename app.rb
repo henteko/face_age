@@ -3,8 +3,10 @@ require 'sinatra/json'
 require 'microsoft_computer_vision'
 require 'json'
 
+set :public_folder, File.dirname(__FILE__) + '/public'
+
 get '/' do
-  'hello'
+  erb :index
 end
 
 post '/api/v1/age' do
